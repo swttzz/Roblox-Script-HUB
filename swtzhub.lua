@@ -37,15 +37,20 @@ Tab1:AddButton({
   	end    
 })
 
---[[
-ESPAÇO PARA JOGO
 
-local Tab4 = Window:MakeTab({
-	Name = "Sem nome",
+local Tab2 = Window:MakeTab({
+	Name = "DEV",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-]]
+
+Tab2:AddButton({
+	Name = "Dark Dex",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua"))()
+      		
+  	end    
+})
 
 --[[
 ESPAÇO PARA JOGO
