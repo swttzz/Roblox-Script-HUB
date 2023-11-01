@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "SWTTZZ HUB", HidePremium = true, IntroText = "SWTTZZ", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "SWTTZZ HUB", HidePremium = true, IntroIcon = " ", IntroText = "swttzz hub starting up", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --ANIME CHAMPIONS SCRIPTS
 
