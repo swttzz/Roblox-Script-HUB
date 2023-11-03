@@ -1,101 +1,88 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "SWTTZZ HUB", HidePremium = true, IntroIcon = " ", IntroText = "swttzz hub starting up", SaveConfig = true, ConfigFolder = "OrionTest"})
 
---ANIME CHAMPIONS SCRIPTS
+local Window = OrionLib:MakeWindow({Name = "SWTTZZ HUB", HidePremium = true, IntroIcon = ' ', IntroText = "swttz hub", SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local Tab1 = Window:MakeTab({
-	Name = "ACS Scripts",
-	Icon = "rbxassetid://4483345998",
+
+-- game:GetService("RunService"):Set3dRenderingEnabled(true);
+
+
+
+local Tab = Window:MakeTab({
+	Name = "ACS SCRIPTS",
+	Icon = " ",
 	PremiumOnly = false
 })
 
-local Section = Tab1:AddSection({
-	Name = "Best Hubs"
+local Section = Tab:AddSection({
+	Name = "Melhores scripts para ACS:"
 })
 
-Tab1:AddButton({
-	Name = "Magenta HUB",
+Tab:AddButton({
+	Name = "1 - Magenta HUB",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Odrexyo/Script/main/Loader.lua"))()
-      		
-  	end    
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Odrexyo/Script/main/Loader.lua"))()
+  	end
 })
 
-Tab1:AddButton({
-	Name = "Banana HUB",
+Tab:AddButton({
+	Name = "2 - Sky HUB",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/diepedyt/bui/main/temporynewkeysystem.lua"))()
-      		
-  	end    
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYHUB/main/WL.lua'))();
+  	end
 })
 
-Tab1:AddButton({
-	Name = "Sky HUB",
+Tab:AddButton({
+	Name = "3 - Banana HUB",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYHUB/main/WL.lua'))();
-      		
-  	end    
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/diepedyt/bui/main/temporynewkeysystem.lua"))()
+  	end
 })
-
 
 local Tab2 = Window:MakeTab({
-	Name = "DEV",
-	Icon = "rbxassetid://4483345998",
+	Name = "Misc/Dev Tools",
+	Icon = " ",
 	PremiumOnly = false
+})
+
+local Section = Tab2:AddSection({
+	Name = "Ativar ou Desativar GPU Rendering"
+})
+
+Tab2:AddButton({
+	Name = "Turn On",
+	Callback = function()
+		game:GetService("RunService"):Set3dRenderingEnabled(true);
+  	end
+})
+
+Tab2:AddButton({
+	Name = "Turn Off",
+	Callback = function()
+		game:GetService("RunService"):Set3dRenderingEnabled(false);
+  	end
+})
+
+local Section = Tab2:AddSection({
+	Name = "HUB SETTINGS"
+})
+
+Tab2:AddButton({
+	Name = "Destruir HUB",
+	Callback = function()
+		OrionLib:Destroy()
+  	end
+})
+
+local Section = Tab2:AddSection({
+	Name = "Dev Tool"
 })
 
 Tab2:AddButton({
 	Name = "Dark Dex",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua"))()
-      		
-  	end    
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+  	end
 })
 
---[[
-ESPAÇO PARA JOGO
 
-local Tab4 = Window:MakeTab({
-	Name = "Sem nome",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-]]
-
---[[
-ESPAÇO PARA JOGO
-
-local Tab4 = Window:MakeTab({
-	Name = "Sem nome",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-]]
-
---MISC
-
-local Tab5 = Window:MakeTab({
-	Name = "Misc",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = Tab5:AddSection({
-	Name = "Miscellaneous"
-})
-
-Tab5:AddButton({
-	Name = "Turn OFF GPU",
-	Callback = function()
-        game:GetService("RunService"):Set3dRenderingEnabled(false)
-      		
-  	end    
-})
-
-Tab5:AddButton({
-	Name = "Turn ON GPU",
-	Callback = function()
-        game:GetService("RunService"):Set3dRenderingEnabled(true)
-      		
-  	end    
-})
+OrionLib:Init()
