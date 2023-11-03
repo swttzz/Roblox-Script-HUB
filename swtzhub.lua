@@ -2,11 +2,6 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "SWTTZZ HUB", HidePremium = true, IntroIcon = ' ', IntroText = "swttz hub", SaveConfig = true, ConfigFolder = "OrionTest"})
 
-
--- game:GetService("RunService"):Set3dRenderingEnabled(true);
-
-
-
 local Tab = Window:MakeTab({
 	Name = "ACS SCRIPTS",
 	Icon = " ",
